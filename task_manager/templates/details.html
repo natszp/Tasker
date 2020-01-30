@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head%} {% endblock %}
+
+{% block body%}
+
+            <body>
+            {% for task in tasks %}
+            <table>
+            <tr class="d-flex">
+                <th scope="row" class="col-2">Name of the task</th>
+                <td class="col-7">
+                    {{ task.name }}
+                </td>
+            </tr>
+            <tr class="d-flex">
+                <th scope="row" class="col-2">Description</th>
+                <td class="col-7">{{ task.description }}
+                </td>
+            </tr>
+            <tr class="d-flex">
+                <th scope="row" class="col-2">When created</th>
+                <td class="col-7">
+                    {{ task.date_created }}
+                </td>
+            </tr>
+             <tr class="d-flex">
+                <th scope="row" class="col-2">Important</th>
+                <td class="col-7">
+                    {{ task.importance  }}
+                </td>
+            </tr>
+            </table>
+            </body>
+
+            {% endfor %}
+
+{% endblock %}

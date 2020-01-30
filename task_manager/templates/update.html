@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tak master</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block head%}
+<title>Task Master</title>
+
+{% endblock %}
+
+{% block body%}
+
+<h1>Update your task</h1>
+
+<form action="" method="POST"> {% csrf_token %}
+    <label>
+        Name
+        <input type="text" name="name">
+    </label>
+    <label>
+        Description
+        <input type="text" name="description">
+    </label>
+    <label>
+        Importance
+       <input type=checkbox checked name="importance">
+    </label>
+    <label>
+        <input type="submit" value="Update task">
+    </label>
+</form>
+
+<!--<h2> updated task </h2>-->
+
+<!--{% for task in tasks %}-->
+<!--{{ task.name }} {{ task.date_created }} {{  task.description }} {{ task.importance }}-->
+<!-- {% endfor %}-->
+
+<!--{% endblock %}-->
+
+</body>
+</html>
